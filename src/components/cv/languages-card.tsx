@@ -1,75 +1,101 @@
 "use client";
 
 import { Globe, Brain } from "lucide-react";
-import { Badge } from "@/components/ui/badge";
+import Image from "next/image";
 
 export function LanguagesCard() {
   return (
     <div>
-      <h2 className="text-base font-semibold text-slate-900 dark:text-white mb-3 flex items-center">
+      <h2 className="text-base font-semibold text-slate-900 dark:text-white mb-4 flex items-center">
         <Globe className="mr-1.5 size-4 text-slate-500" />
         Langues & Soft Skills
       </h2>
 
-      <div className="space-y-3">
+      <div className="space-y-7">
         <div>
-          <h3 className="font-medium text-slate-900 dark:text-white text-sm mb-1.5 border-b border-slate-200 dark:border-zinc-800 pb-0.5">
+          <h3 className="font-medium text-slate-900 dark:text-white text-sm mb-2 border-b border-slate-200 dark:border-zinc-800 pb-0.5">
             Langues
           </h3>
-          <div className="space-y-1">
-            <div className="flex justify-between items-center">
+          <div className="space-y-2">
+            <div className="flex items-center justify-between">
               <span className="text-sm text-slate-700 dark:text-slate-300">
                 Français
               </span>
-              <Badge className="text-xs h-5 px-1.5 bg-slate-100 dark:bg-zinc-800 text-slate-700 dark:text-slate-300 border-0">
-                Natif
-              </Badge>
+              <div className="flex items-center gap-1">
+                <div className="h-2 w-2 rounded-full bg-emerald-500"></div>
+                <div className="h-2 w-2 rounded-full bg-emerald-500"></div>
+                <div className="h-2 w-2 rounded-full bg-emerald-500"></div>
+                <div className="h-2 w-2 rounded-full bg-emerald-500"></div>
+                <div className="h-2 w-2 rounded-full bg-emerald-500"></div>
+              </div>
             </div>
-            <div className="flex justify-between items-center">
+
+            <div className="flex items-center justify-between">
               <span className="text-sm text-slate-700 dark:text-slate-300">
                 Anglais
               </span>
-              <Badge className="text-xs h-5 px-1.5 bg-slate-100 dark:bg-zinc-800 text-slate-700 dark:text-slate-300 border-0">
-                Courant
-              </Badge>
+              <div className="flex items-center gap-1">
+                <div className="h-2 w-2 rounded-full bg-emerald-500"></div>
+                <div className="h-2 w-2 rounded-full bg-emerald-500"></div>
+                <div className="h-2 w-2 rounded-full bg-emerald-500"></div>
+                <div className="h-2 w-2 rounded-full bg-emerald-500"></div>
+                <div className="h-2 w-2 rounded-full bg-slate-200 dark:bg-zinc-700"></div>
+              </div>
             </div>
-            <div className="flex justify-between items-center">
+
+            <div className="flex items-center justify-between">
               <span className="text-sm text-slate-700 dark:text-slate-300">
                 Japonais
               </span>
-              <Badge className="text-xs h-5 px-1.5 bg-slate-100 dark:bg-zinc-800 text-slate-700 dark:text-slate-300 border-0">
-                Débutant
-              </Badge>
+              <div className="flex items-center gap-1">
+                <div className="h-2 w-2 rounded-full bg-emerald-500"></div>
+                <div className="h-2 w-2 rounded-full bg-emerald-500"></div>
+                <div className="h-2 w-2 rounded-full bg-slate-200 dark:bg-zinc-700"></div>
+                <div className="h-2 w-2 rounded-full bg-slate-200 dark:bg-zinc-700"></div>
+                <div className="h-2 w-2 rounded-full bg-slate-200 dark:bg-zinc-700"></div>
+              </div>
             </div>
           </div>
         </div>
 
         <div>
-          <h3 className="font-medium text-slate-900 dark:text-white text-sm mb-1.5 border-b border-slate-200 dark:border-zinc-800 pb-0.5 flex items-center">
+          <h3 className="font-medium text-slate-900 dark:text-white text-sm mb-2 border-b border-slate-200 dark:border-zinc-800 pb-0.5 flex items-center">
             <Brain className="mr-1.5 size-3.5 text-slate-500" />
             Soft Skills
           </h3>
-          <div className="flex flex-wrap gap-1">
-            <Badge className="text-xs h-5 px-1.5 bg-slate-100 dark:bg-zinc-800 text-slate-700 dark:text-slate-300 border-0">
+          <div className="grid grid-cols-2 gap-y-2">
+            <span className="text-sm text-slate-700 dark:text-slate-300">
               Travail d'équipe
-            </Badge>
-            <Badge className="text-xs h-5 px-1.5 bg-slate-100 dark:bg-zinc-800 text-slate-700 dark:text-slate-300 border-0">
+            </span>
+            <span className="text-sm text-slate-700 dark:text-slate-300">
               Communication
-            </Badge>
-            <Badge className="text-xs h-5 px-1.5 bg-slate-100 dark:bg-zinc-800 text-slate-700 dark:text-slate-300 border-0">
+            </span>
+            <span className="text-sm text-slate-700 dark:text-slate-300">
               Résolution
-            </Badge>
-            <Badge className="text-xs h-5 px-1.5 bg-slate-100 dark:bg-zinc-800 text-slate-700 dark:text-slate-300 border-0">
+            </span>
+            <span className="text-sm text-slate-700 dark:text-slate-300">
               Adaptabilité
-            </Badge>
-            <Badge className="text-xs h-5 px-1.5 bg-slate-100 dark:bg-zinc-800 text-slate-700 dark:text-slate-300 border-0">
+            </span>
+            <span className="text-sm text-slate-700 dark:text-slate-300">
               Autonomie
-            </Badge>
-            <Badge className="text-xs h-5 px-1.5 bg-slate-100 dark:bg-zinc-800 text-slate-700 dark:text-slate-300 border-0">
+            </span>
+            <span className="text-sm text-slate-700 dark:text-slate-300">
               Rigueur
-            </Badge>
+            </span>
           </div>
         </div>
+        {/* 
+        <div className="flex flex-col items-center pt-20">
+          <div className="relative w-30 h-30 bg-white p-1 rounded-md shadow-sm border border-slate-200 dark:border-zinc-700">
+            <Image
+              src="/qr-code.svg"
+              alt="QR Code vers mon portfolio"
+              width={96}
+              height={96}
+              className="dark:invert"
+            />
+          </div>
+        </div> */}
       </div>
     </div>
   );

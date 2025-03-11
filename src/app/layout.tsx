@@ -70,6 +70,20 @@ export default function RootLayout({
               color: #059669 !important;
             }
             
+            /* Style for language level dots in print */
+            .h-2.w-2.rounded-full.bg-emerald-500 {
+              background-color: #059669 !important;
+            }
+            
+            .h-2.w-2.rounded-full.bg-slate-200 {
+              background-color: #e2e8f0 !important;
+            }
+            
+            /* QR code styles for print */
+            .dark\\:invert {
+              filter: none !important;
+            }
+            
             /* Adjust badge colors for better printing */
             .badge {
               border: 1px solid #ddd !important;
