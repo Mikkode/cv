@@ -3,18 +3,17 @@
 import { useTheme } from "next-themes";
 import { Button } from "@/components/ui/button";
 import { Moon, Sun } from "lucide-react";
-import { TypingAnimation } from "@/components/magicui/terminal";
 import { useState, useEffect } from "react";
 import { TerminalLoader } from "@/components/cv/terminal-loader";
 import { ProfileCard } from "@/components/cv/profile-card";
 import { SkillsCard } from "@/components/cv/skills-card";
 import { ExperienceCard } from "@/components/cv/experience-card";
-import { ApproachCard } from "@/components/cv/approach-card";
-import { SpecialtiesCard } from "@/components/cv/specialties-card";
+import { EducationCard } from "@/components/cv/education-card";
+import { LanguagesCard } from "@/components/cv/languages-card";
 
 export default function Home() {
   const { theme, setTheme } = useTheme();
-  const [showCV, setShowCV] = useState(false);
+  const [showCV, setShowCV] = useState(true);
 
   const toggleTheme = () => {
     setTheme(theme === "dark" ? "light" : "dark");
@@ -29,48 +28,34 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background to-background/90 relative">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-white dark:from-zinc-950 dark:to-zinc-900">
       {!showCV ? (
         <TerminalLoader />
       ) : (
-        <div className="container mx-auto py-8 px-4">
-          {/* En-tête avec titre */}
+        <div className="container mx-auto py-8 px-4 relative">
           <div className="text-center mb-8">
-            <div className="relative inline-block">
-              <TypingAnimation
-                className="text-xl md:text-3xl font-medium text-purple-400 dark:text-purple-300"
-                duration={50}
-              >
-                Développeur Full-Stack
-              </TypingAnimation>
-            </div>
+            <h1 className="text-3xl font-bold tracking-tight mb-2 text-slate-900 dark:text-white">
+              Mickaël WARIN
+            </h1>
+            <p className="text-slate-600 dark:text-slate-400">
+              Développeur Full Stack • Next.js • NestJS • TypeScript
+            </p>
           </div>
 
-          {/* Bento Grid avec éléments de tailles différentes */}
-          <div className="grid grid-cols-1 md:grid-cols-6 gap-4 max-w-5xl mx-auto">
-            {/* Profil - 2 colonnes */}
-            <div className="md:col-span-2 md:row-span-2">
-              <ProfileCard />
-            </div>
-
-            {/* Expérience - 4 colonnes */}
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-6 max-w-6xl mx-auto">
             <div className="md:col-span-4 md:row-span-2">
-              <ExperienceCard />
+              <div className="space-y-6">
+                <ProfileCard />
+                <LanguagesCard />
+              </div>
             </div>
 
-            {/* Compétences - 3 colonnes */}
-            <div className="md:col-span-3 md:row-span-2">
-              <SkillsCard />
-            </div>
-
-            {/* Technologies - 3 colonnes */}
-            <div className="md:col-span-3 md:row-span-1">
-              <SpecialtiesCard />
-            </div>
-
-            {/* Approche - 3 colonnes */}
-            <div className="md:col-span-3 md:row-span-1">
-              <ApproachCard />
+            <div className="md:col-span-8">
+              <div className="space-y-6">
+                <ExperienceCard />
+                <EducationCard />
+                <SkillsCard />
+              </div>
             </div>
           </div>
         </div>
@@ -80,7 +65,7 @@ export default function Home() {
       <Button
         variant="outline"
         size="icon"
-        className="fixed bottom-4 right-4 rounded-full shadow-lg cursor-pointer bg-background/80 backdrop-blur-sm border-primary/20 hover:bg-primary/10 hover:text-primary"
+        className="fixed bottom-4 right-4 rounded-full shadow-md bg-white/80 dark:bg-zinc-800/80 backdrop-blur-sm border-0"
         onClick={toggleTheme}
         aria-label="Changer de thème"
       >

@@ -1,32 +1,23 @@
 "use client";
 
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { ShineBorder } from "@/components/magicui/shine-border";
 import {
   Github,
   Linkedin,
   Mail,
   MapPin,
   Globe,
-  CheckCircle2,
+  Download,
+  Phone,
 } from "lucide-react";
-import { BorderBeam } from "../magicui/border-beam";
 
 export function ProfileCard() {
   return (
-    <Card className="relative overflow-hidden bg-gradient-to-br from-slate-50 to-white dark:from-slate-950 dark:to-slate-900 h-full">
-      {/* <ShineBorder shineColor={["#A07CFE", "#FE8FB5", "#FFBE7B"]} /> */}
-      <BorderBeam
-        size={230}
-        duration={20}
-        colorFrom="#6366f1"
-        colorTo="#d946ef"
-      />
+    <Card className="overflow-hidden border-0 shadow-md bg-white dark:bg-zinc-900">
       <CardContent className="p-6 flex flex-col items-center">
-        <Avatar className="size-24 mb-4 border-2 border-primary/20">
+        <Avatar className="size-28 mb-5 border-4 border-slate-100 dark:border-zinc-800 shadow-md">
           <AvatarImage
             src="https://github.com/shadcn.png"
             alt="Photo de profil"
@@ -34,48 +25,46 @@ export function ProfileCard() {
           <AvatarFallback>MW</AvatarFallback>
         </Avatar>
 
-        <div className="flex items-center gap-1 mb-2">
-          <h2 className="text-xl font-bold">Mickaël WARIN</h2>
-          <CheckCircle2 className="size-4 text-blue-500" />
+        <div className="w-full space-y-3 mb-5">
+          <div className="flex items-center gap-2 text-slate-700 dark:text-slate-300">
+            <MapPin className="size-4 text-slate-500" />
+            <span className="text-sm">Paris, France</span>
+          </div>
+
+          <div className="flex items-center gap-2 text-slate-700 dark:text-slate-300">
+            <Mail className="size-4 text-slate-500" />
+            <span className="text-sm">contact@exemple.com</span>
+          </div>
+
+          <div className="flex items-center gap-2 text-slate-700 dark:text-slate-300">
+            <Phone className="size-4 text-slate-500" />
+            <span className="text-sm">+33 6 12 34 56 78</span>
+          </div>
+
+          <div className="flex items-center gap-2 text-slate-700 dark:text-slate-300">
+            <Globe className="size-4 text-slate-500" />
+            <span className="text-sm">portfolio.dev</span>
+          </div>
         </div>
 
-        <p className="text-muted-foreground text-sm mb-4 text-center">
-          Développeur Full Stack passionné par l'innovation et les solutions web
-          modernes
-        </p>
-
-        <div className="flex flex-col gap-2 w-full mb-4">
-          <Badge
-            variant="outline"
-            className="flex items-center gap-1 justify-center"
-          >
-            <MapPin className="size-3" /> Paris, France
-          </Badge>
-          <Badge
-            variant="outline"
-            className="flex items-center gap-1 justify-center"
-          >
-            <Mail className="size-3" /> contact@exemple.com
-          </Badge>
-          <Badge
-            variant="outline"
-            className="flex items-center gap-1 justify-center"
-          >
-            <Globe className="size-3" /> portfolio.dev
-          </Badge>
-        </div>
-
-        <div className="flex gap-2 justify-center">
-          <Button size="icon" variant="outline">
+        <div className="flex gap-3 justify-center mb-5">
+          <Button size="icon" variant="outline" className="rounded-full">
             <Github className="size-4" />
           </Button>
-          <Button size="icon" variant="outline">
+          <Button size="icon" variant="outline" className="rounded-full">
             <Linkedin className="size-4" />
           </Button>
-          <Button size="icon" variant="outline">
+          <Button size="icon" variant="outline" className="rounded-full">
             <Mail className="size-4" />
           </Button>
         </div>
+
+        <Button
+          variant="default"
+          className="w-full gap-2 bg-slate-900 hover:bg-slate-800 dark:bg-slate-800 dark:hover:bg-slate-700"
+        >
+          <Download className="size-4" /> Télécharger CV
+        </Button>
       </CardContent>
     </Card>
   );

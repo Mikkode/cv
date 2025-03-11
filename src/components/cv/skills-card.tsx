@@ -1,98 +1,119 @@
 "use client";
 
-import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Progress } from "@/components/ui/progress";
-import { ShineBorder } from "@/components/magicui/shine-border";
 import { Code2 } from "lucide-react";
-import { BorderBeam } from "../magicui/border-beam";
+import { Badge } from "@/components/ui/badge";
 
 export function SkillsCard() {
   return (
-    <Card className="relative overflow-hidden bg-gradient-to-br from-slate-50 to-white dark:from-slate-950 dark:to-slate-900 h-full">
-      <BorderBeam
-        size={200}
-        duration={80}
-        colorFrom="#6366f1"
-        colorTo="#d946ef"
-      />
-      <CardHeader className="pb-2">
-        <CardTitle className="text-lg flex items-center">
-          <Code2 className="mr-2 size-5 text-purple-400" />
-          Compétences
+    <Card className="overflow-hidden border-0 shadow-md bg-white dark:bg-zinc-900">
+      <CardHeader className="pb-2 border-b border-slate-100 dark:border-zinc-800">
+        <CardTitle className="text-lg flex items-center text-slate-900 dark:text-white">
+          <Code2 className="mr-2 size-5 text-slate-500" />
+          Compétences & Technologies
         </CardTitle>
       </CardHeader>
-      <CardContent>
-        <div className="space-y-3">
+      <CardContent className="p-6">
+        <div className="space-y-5">
           <div>
-            <div className="flex justify-between mb-1">
-              <span className="text-sm font-medium">Next.js</span>
-              <span className="text-sm text-muted-foreground">95%</span>
+            <h3 className="font-semibold text-slate-900 dark:text-white mb-3">
+              Développement Front-end
+            </h3>
+            <div className="flex flex-wrap gap-2">
+              <Badge className="bg-blue-50 text-blue-700 dark:bg-blue-900/20 dark:text-blue-300 border-0 px-3 py-1">
+                React
+              </Badge>
+              <Badge className="bg-blue-50 text-blue-700 dark:bg-blue-900/20 dark:text-blue-300 border-0 px-3 py-1">
+                Next.js
+              </Badge>
+              <Badge className="bg-blue-50 text-blue-700 dark:bg-blue-900/20 dark:text-blue-300 border-0 px-3 py-1">
+                TypeScript
+              </Badge>
+              <Badge className="bg-blue-50 text-blue-700 dark:bg-blue-900/20 dark:text-blue-300 border-0 px-3 py-1">
+                JavaScript
+              </Badge>
+              <Badge className="bg-blue-50 text-blue-700 dark:bg-blue-900/20 dark:text-blue-300 border-0 px-3 py-1">
+                HTML/CSS
+              </Badge>
+              <Badge className="bg-blue-50 text-blue-700 dark:bg-blue-900/20 dark:text-blue-300 border-0 px-3 py-1">
+                Tailwind CSS
+              </Badge>
             </div>
-            <Progress
-              value={95}
-              className="h-2 bg-slate-200 dark:bg-slate-700"
-            />
           </div>
+
           <div>
-            <div className="flex justify-between mb-1">
-              <span className="text-sm font-medium">NestJS</span>
-              <span className="text-sm text-muted-foreground">90%</span>
+            <h3 className="font-semibold text-slate-900 dark:text-white mb-3">
+              Développement Back-end
+            </h3>
+            <div className="flex flex-wrap gap-2">
+              <Badge className="bg-green-50 text-green-700 dark:bg-green-900/20 dark:text-green-300 border-0 px-3 py-1">
+                Node.js
+              </Badge>
+              <Badge className="bg-green-50 text-green-700 dark:bg-green-900/20 dark:text-green-300 border-0 px-3 py-1">
+                NestJS
+              </Badge>
+              <Badge className="bg-green-50 text-green-700 dark:bg-green-900/20 dark:text-green-300 border-0 px-3 py-1">
+                Express
+              </Badge>
+              <Badge className="bg-green-50 text-green-700 dark:bg-green-900/20 dark:text-green-300 border-0 px-3 py-1">
+                REST API
+              </Badge>
+              <Badge className="bg-green-50 text-green-700 dark:bg-green-900/20 dark:text-green-300 border-0 px-3 py-1">
+                Python
+              </Badge>
+              <Badge className="bg-green-50 text-green-700 dark:bg-green-900/20 dark:text-green-300 border-0 px-3 py-1">
+                C
+              </Badge>
             </div>
-            <Progress
-              value={90}
-              className="h-2 bg-slate-200 dark:bg-slate-700"
-            />
           </div>
+
           <div>
-            <div className="flex justify-between mb-1">
-              <span className="text-sm font-medium">TypeScript</span>
-              <span className="text-sm text-muted-foreground">85%</span>
+            <h3 className="font-semibold text-slate-900 dark:text-white mb-3">
+              Base de données & DevOps
+            </h3>
+            <div className="flex flex-wrap gap-2">
+              <Badge className="bg-purple-50 text-purple-700 dark:bg-purple-900/20 dark:text-purple-300 border-0 px-3 py-1">
+                PostgreSQL
+              </Badge>
+              <Badge className="bg-purple-50 text-purple-700 dark:bg-purple-900/20 dark:text-purple-300 border-0 px-3 py-1">
+                MongoDB
+              </Badge>
+              <Badge className="bg-purple-50 text-purple-700 dark:bg-purple-900/20 dark:text-purple-300 border-0 px-3 py-1">
+                Docker
+              </Badge>
+              <Badge className="bg-purple-50 text-purple-700 dark:bg-purple-900/20 dark:text-purple-300 border-0 px-3 py-1">
+                Git
+              </Badge>
+              <Badge className="bg-purple-50 text-purple-700 dark:bg-purple-900/20 dark:text-purple-300 border-0 px-3 py-1">
+                CI/CD
+              </Badge>
             </div>
-            <Progress
-              value={85}
-              className="h-2 bg-slate-200 dark:bg-slate-700"
-            />
           </div>
+
           <div>
-            <div className="flex justify-between mb-1">
-              <span className="text-sm font-medium">Node.js</span>
-              <span className="text-sm text-muted-foreground">80%</span>
+            <h3 className="font-semibold text-slate-900 dark:text-white mb-3">
+              Spécialités techniques
+            </h3>
+            <div className="flex flex-wrap gap-2">
+              <Badge className="bg-amber-50 text-amber-700 dark:bg-amber-900/20 dark:text-amber-300 border-0 px-3 py-1">
+                C/C++
+              </Badge>
+              <Badge className="bg-amber-50 text-amber-700 dark:bg-amber-900/20 dark:text-amber-300 border-0 px-3 py-1">
+                Qt
+              </Badge>
+              <Badge className="bg-amber-50 text-amber-700 dark:bg-amber-900/20 dark:text-amber-300 border-0 px-3 py-1">
+                Linux
+              </Badge>
+              <Badge className="bg-amber-50 text-amber-700 dark:bg-amber-900/20 dark:text-amber-300 border-0 px-3 py-1">
+                SCPI
+              </Badge>
+              <Badge className="bg-amber-50 text-amber-700 dark:bg-amber-900/20 dark:text-amber-300 border-0 px-3 py-1">
+                Hyperfréquence
+              </Badge>
+              <Badge className="bg-amber-50 text-amber-700 dark:bg-amber-900/20 dark:text-amber-300 border-0 px-3 py-1">
+                Microservices
+              </Badge>
             </div>
-            <Progress
-              value={80}
-              className="h-2 bg-slate-200 dark:bg-slate-700"
-            />
-          </div>
-          <div>
-            <div className="flex justify-between mb-1">
-              <span className="text-sm font-medium">Python</span>
-              <span className="text-sm text-muted-foreground">75%</span>
-            </div>
-            <Progress
-              value={75}
-              className="h-2 bg-slate-200 dark:bg-slate-700"
-            />
-          </div>
-          <div>
-            <div className="flex justify-between mb-1">
-              <span className="text-sm font-medium">JavaScript</span>
-              <span className="text-sm text-muted-foreground">90%</span>
-            </div>
-            <Progress
-              value={90}
-              className="h-2 bg-slate-200 dark:bg-slate-700"
-            />
-          </div>
-          <div>
-            <div className="flex justify-between mb-1">
-              <span className="text-sm font-medium">HTML/CSS</span>
-              <span className="text-sm text-muted-foreground">85%</span>
-            </div>
-            <Progress
-              value={85}
-              className="h-2 bg-slate-200 dark:bg-slate-700"
-            />
           </div>
         </div>
       </CardContent>
