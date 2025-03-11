@@ -32,14 +32,14 @@ export default function Home() {
       {!showCV ? (
         <TerminalLoader />
       ) : (
-        <div className="container mx-auto py-8 px-4 relative">
-          <div className="max-w-5xl mx-auto bg-white dark:bg-zinc-900 shadow-lg rounded-lg overflow-hidden border border-slate-200 dark:border-zinc-800">
+        <div className="container mx-auto py-4 px-3 relative">
+          <div className="max-w-6xl mx-auto bg-white dark:bg-zinc-900 shadow-lg rounded-lg overflow-hidden border border-slate-200 dark:border-zinc-800">
             {/* En-tête du CV */}
-            <div className="p-6 border-b border-slate-200 dark:border-zinc-800 text-center">
-              <h1 className="text-3xl font-bold tracking-tight mb-1 text-slate-900 dark:text-white">
+            <div className="p-3 border-b border-slate-200 dark:border-zinc-800 text-center">
+              <h1 className="text-2xl font-bold tracking-tight text-slate-900 dark:text-white">
                 Mickaël WARIN
               </h1>
-              <p className="text-slate-600 dark:text-slate-400">
+              <p className="text-sm text-slate-600 dark:text-slate-400">
                 Développeur Full Stack
               </p>
             </div>
@@ -47,23 +47,23 @@ export default function Home() {
             {/* Corps du CV */}
             <div className="flex flex-col md:flex-row">
               {/* Colonne de gauche */}
-              <div className="md:w-1/3 p-4 border-r border-slate-200 dark:border-zinc-800">
-                <div className="space-y-6">
+              <div className="md:w-1/4 p-3 border-r border-slate-200 dark:border-zinc-800">
+                <div className="space-y-4">
                   <ProfileCard />
-                  <div className="border-t border-slate-200 dark:border-zinc-800 pt-6">
+                  <div className="border-t border-slate-200 dark:border-zinc-800 pt-4">
                     <LanguagesCard />
                   </div>
                 </div>
               </div>
 
               {/* Colonne de droite */}
-              <div className="md:w-2/3 p-4">
-                <div className="space-y-6">
+              <div className="md:w-3/4 p-3">
+                <div className="space-y-4">
                   <ExperienceCard />
-                  <div className="border-t border-slate-200 dark:border-zinc-800 pt-6 mt-6">
+                  <div className="border-t border-slate-200 dark:border-zinc-800 pt-4 mt-4">
                     <SkillsCard />
                   </div>
-                  <div className="border-t border-slate-200 dark:border-zinc-800 pt-6 mt-6">
+                  <div className="border-t border-slate-200 dark:border-zinc-800 pt-4 mt-4">
                     <EducationCard />
                   </div>
                 </div>
@@ -77,7 +77,7 @@ export default function Home() {
       <Button
         variant="outline"
         size="icon"
-        className="fixed bottom-4 right-4 rounded-full shadow-md bg-white/80 dark:bg-zinc-800/80 backdrop-blur-sm border-0"
+        className="fixed bottom-4 right-4 rounded-full shadow-md bg-white/80 dark:bg-zinc-800/80 backdrop-blur-sm border-0 print-hidden"
         onClick={toggleTheme}
         aria-label="Changer de thème"
       >
