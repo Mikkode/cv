@@ -13,34 +13,34 @@ export function LanguagesCard() {
           Langues & Soft Skills
         </CardTitle>
       </CardHeader>
-      <CardContent className="p-6">
-        <div className="space-y-6">
+      <CardContent className="p-4">
+        <div className="space-y-3">
           <div>
-            <h3 className="font-semibold text-slate-900 dark:text-white mb-3">
+            <h3 className="font-semibold text-slate-900 dark:text-white text-sm mb-2">
               Langues
             </h3>
-            <div className="space-y-2">
-              <div className="flex justify-between">
-                <span className="text-sm text-slate-700 dark:text-slate-300">
+            <div className="space-y-1.5">
+              <div className="flex justify-between items-center">
+                <span className="text-xs text-slate-700 dark:text-slate-300">
                   Français
                 </span>
-                <Badge className="bg-slate-100 dark:bg-zinc-800 text-slate-700 dark:text-slate-300 border-0">
+                <Badge className="text-xs h-5 px-1.5 bg-slate-100 dark:bg-zinc-800 text-slate-700 dark:text-slate-300 border-0">
                   Natif
                 </Badge>
               </div>
-              <div className="flex justify-between">
-                <span className="text-sm text-slate-700 dark:text-slate-300">
+              <div className="flex justify-between items-center">
+                <span className="text-xs text-slate-700 dark:text-slate-300">
                   Anglais
                 </span>
-                <Badge className="bg-slate-100 dark:bg-zinc-800 text-slate-700 dark:text-slate-300 border-0">
+                <Badge className="text-xs h-5 px-1.5 bg-slate-100 dark:bg-zinc-800 text-slate-700 dark:text-slate-300 border-0">
                   Courant
                 </Badge>
               </div>
-              <div className="flex justify-between">
-                <span className="text-sm text-slate-700 dark:text-slate-300">
+              <div className="flex justify-between items-center">
+                <span className="text-xs text-slate-700 dark:text-slate-300">
                   Japonais
                 </span>
-                <Badge className="bg-slate-100 dark:bg-zinc-800 text-slate-700 dark:text-slate-300 border-0">
+                <Badge className="text-xs h-5 px-1.5 bg-slate-100 dark:bg-zinc-800 text-slate-700 dark:text-slate-300 border-0">
                   Débutant
                 </Badge>
               </div>
@@ -48,27 +48,27 @@ export function LanguagesCard() {
           </div>
 
           <div>
-            <h3 className="font-semibold text-slate-900 dark:text-white mb-3 flex items-center">
-              <Brain className="mr-2 size-4 text-slate-500" />
+            <h3 className="font-semibold text-slate-900 dark:text-white text-sm mb-2 flex items-center">
+              <Brain className="mr-1.5 size-3.5 text-slate-500" />
               Soft Skills
             </h3>
-            <div className="flex flex-wrap gap-2">
-              <Badge className="bg-slate-100 dark:bg-zinc-800 text-slate-700 dark:text-slate-300 border-0">
+            <div className="flex flex-wrap gap-1.5">
+              <Badge className="text-xs h-5 px-1.5 bg-slate-100 dark:bg-zinc-800 text-slate-700 dark:text-slate-300 border-0">
                 Travail d'équipe
               </Badge>
-              <Badge className="bg-slate-100 dark:bg-zinc-800 text-slate-700 dark:text-slate-300 border-0">
+              <Badge className="text-xs h-5 px-1.5 bg-slate-100 dark:bg-zinc-800 text-slate-700 dark:text-slate-300 border-0">
                 Communication
               </Badge>
-              <Badge className="bg-slate-100 dark:bg-zinc-800 text-slate-700 dark:text-slate-300 border-0">
-                Résolution de problèmes
+              <Badge className="text-xs h-5 px-1.5 bg-slate-100 dark:bg-zinc-800 text-slate-700 dark:text-slate-300 border-0">
+                Résolution
               </Badge>
-              <Badge className="bg-slate-100 dark:bg-zinc-800 text-slate-700 dark:text-slate-300 border-0">
+              <Badge className="text-xs h-5 px-1.5 bg-slate-100 dark:bg-zinc-800 text-slate-700 dark:text-slate-300 border-0">
                 Adaptabilité
               </Badge>
-              <Badge className="bg-slate-100 dark:bg-zinc-800 text-slate-700 dark:text-slate-300 border-0">
+              <Badge className="text-xs h-5 px-1.5 bg-slate-100 dark:bg-zinc-800 text-slate-700 dark:text-slate-300 border-0">
                 Autonomie
               </Badge>
-              <Badge className="bg-slate-100 dark:bg-zinc-800 text-slate-700 dark:text-slate-300 border-0">
+              <Badge className="text-xs h-5 px-1.5 bg-slate-100 dark:bg-zinc-800 text-slate-700 dark:text-slate-300 border-0">
                 Rigueur
               </Badge>
             </div>
