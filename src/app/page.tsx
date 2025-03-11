@@ -33,28 +33,40 @@ export default function Home() {
         <TerminalLoader />
       ) : (
         <div className="container mx-auto py-8 px-4 relative">
-          <div className="text-center mb-6">
-            <h1 className="text-3xl font-bold tracking-tight mb-1 text-slate-900 dark:text-white">
-              Mickaël WARIN
-            </h1>
-            <p className="text-slate-600 dark:text-slate-400">
-              Développeur Full Stack • Next.js • NestJS • TypeScript
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-4 max-w-6xl mx-auto">
-            <div className="md:col-span-4">
-              <div className="space-y-4">
-                <ProfileCard />
-                <LanguagesCard />
-              </div>
+          <div className="max-w-5xl mx-auto bg-white dark:bg-zinc-900 shadow-lg rounded-lg overflow-hidden border border-slate-200 dark:border-zinc-800">
+            {/* En-tête du CV */}
+            <div className="p-6 border-b border-slate-200 dark:border-zinc-800 text-center">
+              <h1 className="text-3xl font-bold tracking-tight mb-1 text-slate-900 dark:text-white">
+                Mickaël WARIN
+              </h1>
+              <p className="text-slate-600 dark:text-slate-400">
+                Développeur Full Stack
+              </p>
             </div>
 
-            <div className="md:col-span-8">
-              <div className="space-y-4">
-                <ExperienceCard />
-                <SkillsCard />
-                <EducationCard />
+            {/* Corps du CV */}
+            <div className="flex flex-col md:flex-row">
+              {/* Colonne de gauche */}
+              <div className="md:w-1/3 p-4 border-r border-slate-200 dark:border-zinc-800">
+                <div className="space-y-6">
+                  <ProfileCard />
+                  <div className="border-t border-slate-200 dark:border-zinc-800 pt-6">
+                    <LanguagesCard />
+                  </div>
+                </div>
+              </div>
+
+              {/* Colonne de droite */}
+              <div className="md:w-2/3 p-4">
+                <div className="space-y-6">
+                  <ExperienceCard />
+                  <div className="border-t border-slate-200 dark:border-zinc-800 pt-6 mt-6">
+                    <SkillsCard />
+                  </div>
+                  <div className="border-t border-slate-200 dark:border-zinc-800 pt-6 mt-6">
+                    <EducationCard />
+                  </div>
+                </div>
               </div>
             </div>
           </div>
