@@ -11,9 +11,9 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-white dark:from-zinc-950 dark:to-zinc-900 p-4 overflow-auto">
-      <div className="flex flex-col lg:flex-row justify-center items-start gap-4">
-        {/* Terminal - se réduit si nécessaire */}
-        <div className="w-full lg:sticky lg:top-4 lg:w-auto lg:flex-shrink lg:min-w-[250px]">
+      <div className="flex w-full h-full flex-col lg:flex-row justify-center items-start gap-4">
+        {/* Terminal - normal en mobile, sticky en desktop */}
+        <div className="w-full lg:w-auto lg:flex-shrink lg:min-w-[250px] lg:h-fit">
           <TerminalLoader onLoadingComplete={handleTerminalLoadingComplete} />
         </div>
 

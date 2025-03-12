@@ -14,7 +14,7 @@ export function LanguagesCard() {
           <h3 className="text-base font-medium border-b-2 border-emerald-100 dark:border-emerald-950 pb-1">
             Langues
           </h3>
-          <div className="space-y-2">
+          <div className="space-y-2 ">
             <div className="flex justify-between items-center">
               <span className="text-sm">Français</span>
               <div className="flex gap-0.5">

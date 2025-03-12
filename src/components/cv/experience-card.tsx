@@ -19,10 +19,9 @@ export function ExperienceCard() {
             </span>
           </div>
           <p className="text-sm text-slate-600 dark:text-slate-400 mb-2 print:text-xs">
-            Développeur Full-Stack Freelance spécialisé en NestJS, NextJS et
-            bases de données scalables. J&apos;aide les entreprises à concevoir
-            des applications web performantes, sécurisées et adaptées à leurs
-            besoins.
+            Développeur Full-Stack Freelance spécialisé en NextJS, NestJS.
+            J&apos;aide les entreprises à concevoir des applications web
+            performantes, sécurisées et adaptées à leurs besoins.
           </p>
           <div className="space-y-1.5 print:space-y-0.5">
             <div className="flex items-start gap-1.5">
