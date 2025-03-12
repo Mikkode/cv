@@ -18,7 +18,7 @@ export default function Home() {
         </div>
 
         {/* CV - prioritaire avec taille minimale et maximale */}
-        <div className="w-full lg:min-w-[768px] lg:max-w-4xl">
+        <div className="w-full lg:min-w-3xl lg:max-w-4xl">
           <ResumeContent />
         </div>
       </div>
