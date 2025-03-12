@@ -4,11 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Moon, Sun, Printer } from "lucide-react";
 import { useTheme } from "next-themes";
 
-interface FloatingButtonsProps {
-  onPrint: () => void;
-}
-
-export function FloatingButtons({ onPrint }: FloatingButtonsProps) {
+export function FloatingButtons() {
   const { theme, setTheme } = useTheme();
 
   const toggleTheme = () => {

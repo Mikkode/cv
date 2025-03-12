@@ -22,8 +22,8 @@ export function ExperienceCard() {
           </div>
           <p className="text-sm text-slate-600 dark:text-slate-400 mb-2 print:text-xs">
             Développeur Full-Stack Freelance spécialisé en NestJS, NextJS et
-            bases de données scalables. J'aide les entreprises à concevoir des
-            applications web performantes, sécurisées et adaptées à leurs
+            bases de données scalables. J&apos;aide les entreprises à concevoir
+            des applications web performantes, sécurisées et adaptées à leurs
             besoins.
           </p>
           <div className="space-y-1.5 print:space-y-0.5">
@@ -71,9 +71,10 @@ export function ExperienceCard() {
             </span>
           </div>
           <p className="text-sm text-slate-600 dark:text-slate-400 mb-2 print:text-xs">
-            Pendant 9 ans chez Thales, j'ai conçu et développé des applications
-            logicielles critiques dans des environnements exigeants, en
-            utilisant C, C++, Python, ainsi que des frameworks internes.
+            Pendant 9 ans chez Thales, j&apos;ai conçu et développé des
+            applications logicielles critiques dans des environnements
+            exigeants, en utilisant C, C++, Python, ainsi que des frameworks
+            internes.
           </p>
           <div className="space-y-1.5 print:space-y-0.5">
             <div className="flex items-start gap-1.5">
@@ -110,9 +111,9 @@ export function ExperienceCard() {
             </div>
           </div>
           <p className="text-sm text-slate-600 dark:text-slate-400 mt-2 print:text-xs">
-            Cette expérience m'a apporté une rigueur technique, une capacité
-            d'adaptation à des environnements complexes et une approche orientée
-            performance et qualité.
+            Cette expérience m&apos;a apporté une rigueur technique, une
+            capacité d&apos;adaptation à des environnements complexes et une
+            approche orientée performance et qualité.
           </p>
         </div>
       </div>

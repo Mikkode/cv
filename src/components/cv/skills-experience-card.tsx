@@ -94,8 +94,8 @@ export function SkillsExperienceCard() {
                   Oct. 2024 - Présent
                 </p>
                 <p className="text-sm">
-                  Développement d'applications web avec Next.js, NestJS et bases
-                  de données scalables
+                  Développement d&apos;applications web avec Next.js, NestJS et
+                  bases de données scalables
                 </p>
               </div>
 
@@ -118,7 +118,7 @@ export function SkillsExperienceCard() {
 
             <div className="border-l-2 border-purple-400 pl-4">
               <h4 className="font-bold">
-                ETNA, école d'alternance en informatique
+                ETNA, école d&apos;alternance en informatique
               </h4>
               <p className="text-sm text-muted-foreground mb-1">2014 - 2017</p>
               <p className="text-sm">

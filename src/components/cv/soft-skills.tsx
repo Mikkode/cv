@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
 import {
   Users,
   MessageSquare,
@@ -17,13 +16,8 @@ interface SkillProps {
 }
 
 const SkillItem = ({ name, icon }: SkillProps) => {
-  const { ref, inView } = useInView({
-    threshold: 0.1,
-    triggerOnce: true,
-  });
-
   return (
-    <div ref={ref} className="flex items-start gap-1.5">
+    <div className="flex items-start gap-1.5">
       <div className="flex-shrink-0 text-emerald-500 dark:text-emerald-400 mt-0.5">
         {icon}
       </div>

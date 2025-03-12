@@ -1,7 +1,6 @@
 "use client";
 
-import { Globe, Brain } from "lucide-react";
-import Image from "next/image";
+import { Globe } from "lucide-react";
 import { SoftSkills } from "@/components/cv/soft-skills";
 
 export function LanguagesCard() {

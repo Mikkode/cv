@@ -20,8 +20,8 @@ export function EducationCard() {
           </span>
         </div>
         <p className="text-sm text-slate-600 dark:text-slate-400">
-          ETNA, école d'alternance - Formation spécialisée en développement web
-          et mobile
+          ETNA, école d&apos;alternance - Formation spécialisée en développement
+          web et mobile
         </p>
       </div>
     </div>
