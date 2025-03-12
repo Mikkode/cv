@@ -314,8 +314,9 @@ export default function RootLayout({
             }
             
             .size-4 {
-              width: 1rem !important;
-              height: 1rem !important;
+              width: 16px !important;
+              height: 16px !important;
+              flex-shrink: 0 !important;
             }
             
             .size-3\\.5 {
@@ -326,6 +327,19 @@ export default function RootLayout({
             /* Ajuster l'espacement des listes */
             .pl-2 {
               padding-left: 0.4rem !important;
+            }
+            
+            /* Assurer que les textes longs se coupent correctement */
+            .break-words {
+              word-break: break-word !important;
+              overflow-wrap: break-word !important;
+              max-width: 100% !important;
+            }
+            
+            /* Ajuster la taille des boutons sociaux */
+            .h-8.w-8 {
+              height: 32px !important;
+              width: 32px !important;
             }
           }
         `}</style>
