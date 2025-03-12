@@ -15,13 +15,34 @@ export function FloatingButtons({ onPrint }: FloatingButtonsProps) {
     setTheme(theme === "dark" ? "light" : "dark");
   };
 
+  const handlePrint = () => {
+    // Forcer le thème clair pour l'impression
+    const currentTheme = theme;
+    if (theme === "dark") {
+      setTheme("light");
+    }
+
+    // Attendre que le DOM soit mis à jour
+    setTimeout(() => {
+      // Imprimer
+      window.print();
+
+      // Restaurer le thème
+      if (currentTheme === "dark") {
+        setTimeout(() => {
+          setTheme(currentTheme);
+        }, 100);
+      }
+    }, 100);
+  };
+
   return (
     <div className="flex justify-end gap-2 mb-4 print-hidden">
       <Button
         variant="outline"
         size="icon"
         className="rounded-full shadow-md bg-white/90 dark:bg-zinc-800/90 backdrop-blur-sm border-0"
-        onClick={onPrint}
+        onClick={handlePrint}
         aria-label="Imprimer le CV"
       >
         <Printer className="h-[1.2rem] w-[1.2rem]" />
