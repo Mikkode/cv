@@ -1,14 +1,32 @@
 "use client";
 
+import { useEffect } from "react";
 import {
   Terminal,
   AnimatedSpan,
   TypingAnimation,
 } from "@/components/magicui/terminal";
 
-export function TerminalLoader() {
+interface TerminalLoaderProps {
+  onLoadingComplete?: () => void;
+}
+
+export function TerminalLoader({ onLoadingComplete }: TerminalLoaderProps) {
+  useEffect(() => {
+    // Calculer le temps total d'animation basé sur les délais dans le composant
+    const totalAnimationTime = 3800 + 30 + 500; // Dernier délai + durée de typing + marge supplémentaire
+
+    const timer = setTimeout(() => {
+      if (onLoadingComplete) {
+        onLoadingComplete();
+      }
+    }, totalAnimationTime);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
-    <div className="container mx-auto py-20 flex justify-center items-center min-h-screen">
+    <div className="w-full flex justify-center items-center">
       <Terminal className="w-full max-w-2xl">
         <AnimatedSpan delay={100}>
           <span className="text-green-500">carrot@pixel:~$</span> npm create

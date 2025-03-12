@@ -1,5 +1,3 @@
-"use client";
-
 import { Briefcase, CheckCircle2 } from "lucide-react";
 
 export function ExperienceCard() {

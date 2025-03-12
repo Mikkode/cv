@@ -1,6 +1,3 @@
-"use client";
-
-import { motion } from "framer-motion";
 import {
   Users,
   MessageSquare,
@@ -45,15 +42,9 @@ export function SoftSkills() {
       </h3>
       <div className="grid grid-cols-1 gap-x-1 gap-y-2 w-full">
         {skills.map((skill, index) => (
-          <motion.div
-            key={index}
-            initial={{ opacity: 0, y: 5 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.2, delay: index * 0.05 }}
-            className="w-full"
-          >
+          <div key={index}>
             <SkillItem name={skill.name} icon={skill.icon} />
-          </motion.div>
+          </div>
         ))}
       </div>
     </div>

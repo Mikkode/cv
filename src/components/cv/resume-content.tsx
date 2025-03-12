@@ -1,5 +1,3 @@
-"use client";
-
 import { BorderBeam } from "@/components/magicui/border-beam";
 import { ProfileCard } from "@/components/cv/profile-card";
 import { SkillsCard } from "@/components/cv/skills-card";
@@ -9,7 +7,7 @@ import { LanguagesCard } from "@/components/cv/languages-card";
 
 export function ResumeContent() {
   return (
-    <div className="relative bg-white dark:bg-zinc-900 shadow-lg rounded-xl overflow-hidden border border-slate-200 dark:border-zinc-800 resume-content">
+    <div className="relative w-full max-w-4xl min-w-3xl bg-white dark:bg-zinc-900 shadow-lg rounded-xl overflow-hidden border border-slate-200 dark:border-zinc-800 resume-content">
       <BorderBeam
         className="print-hidden"
         size={700}

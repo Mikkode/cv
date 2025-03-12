@@ -1,5 +1,3 @@
-"use client";
-
 import { Globe } from "lucide-react";
 import { SoftSkills } from "@/components/cv/soft-skills";
 
