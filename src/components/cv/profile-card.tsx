@@ -2,27 +2,10 @@
 
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
-import {
-  Github,
-  Linkedin,
-  Mail,
-  MapPin,
-  Globe,
-  Download,
-  Phone,
-  Printer,
-} from "lucide-react";
+import { Github, Linkedin, Mail, MapPin, Globe, Phone } from "lucide-react";
 import Link from "next/link";
 
-interface ProfileCardProps {
-  showPrintButton?: boolean;
-}
-
-export function ProfileCard({ showPrintButton = true }: ProfileCardProps) {
-  const handlePrint = () => {
-    window.print();
-  };
-
+export function ProfileCard() {
   return (
     <div>
       <div className="flex flex-col items-center mb-3">
@@ -87,16 +70,6 @@ export function ProfileCard({ showPrintButton = true }: ProfileCardProps) {
             <Mail className="size-3.5 text-slate-700 dark:text-slate-300" />
           </Button>
         </Link>
-        {showPrintButton && (
-          <Button
-            variant="default"
-            size="sm"
-            className="flex-1 gap-1 text-xs h-7 bg-slate-800 hover:bg-slate-700 dark:bg-slate-700 dark:hover:bg-slate-600 text-white"
-            onClick={handlePrint}
-          >
-            <Printer className="size-3.5" /> Imprimer CV
-          </Button>
-        )}
       </div>
     </div>
   );

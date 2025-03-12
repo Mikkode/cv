@@ -110,6 +110,30 @@ export default function RootLayout({
               color: #333 !important;
             }
             
+            /* Force desktop layout for printing */
+            .flex-col {
+              flex-direction: row !important;
+            }
+            
+            .md\\:flex-row {
+              flex-direction: row !important;
+            }
+            
+            .md\\:w-1\\/4 {
+              width: 25% !important;
+            }
+            
+            .md\\:w-3\\/4 {
+              width: 75% !important;
+            }
+            
+            /* Ensure border is visible in print */
+            .border-r {
+              border-right-width: 1px !important;
+              border-right-style: solid !important;
+              border-right-color: #e2e8f0 !important;
+            }
+            
             /* Add page breaks where needed */
             .page-break-after {
               page-break-after: always;
@@ -118,6 +142,7 @@ export default function RootLayout({
             /* Ensure proper margins */
             @page {
               margin: 1.5cm;
+              size: A4 portrait;
             }
             
             /* Improve line spacing for better readability */
