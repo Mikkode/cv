@@ -11,7 +11,7 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  title: "CV - Développeur Fullstack | Next.js, React, Node.js, TypeScript",
+  title: "Mickaël WARIN - Développeur Fullstack",
   description:
     "CV développeur fullstack spécialisé en Next.js, React, Node.js et TypeScript. Expertise en développement web moderne SAAS et applications performantes.",
   keywords: [
