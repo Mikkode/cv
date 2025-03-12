@@ -1,12 +1,16 @@
 "use client";
 
-// import { useState } from "react";
+import { useState } from "react";
+import { motion } from "framer-motion";
 import { TerminalLoader } from "@/components/cv/terminal-loader";
 import { ResumeContent } from "@/components/cv/resume-content";
 
 export default function Home() {
+  const [isAnimating, setIsAnimating] = useState(false);
+
   const handleTerminalLoadingComplete = () => {
     console.log("Terminal loading complete");
+    setIsAnimating(true);
   };
 
   return (
@@ -18,9 +22,22 @@ export default function Home() {
         </div>
 
         {/* CV - prioritaire avec taille minimale et maximale */}
-        <div className="w-full lg:min-w-3xl lg:max-w-4xl">
+        <motion.div
+          initial={{ height: 0, opacity: 0, overflow: "hidden" }}
+          animate={
+            isAnimating
+              ? { height: "auto", opacity: 1, overflow: "visible" }
+              : {}
+          }
+          transition={{
+            height: { duration: 2, ease: "easeOut" },
+            opacity: { duration: 1.8, ease: "easeIn" },
+            overflow: { delay: 2 },
+          }}
+          className="w-full lg:min-w-3xl lg:max-w-4xl"
+        >
           <ResumeContent />
-        </div>
+        </motion.div>
       </div>
     </div>
   );
