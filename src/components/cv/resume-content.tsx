@@ -9,13 +9,13 @@ import { LanguagesCard } from "@/components/cv/languages-card";
 
 export function ResumeContent() {
   return (
-    <div className="bg-white dark:bg-zinc-900 shadow-lg rounded-xl overflow-hidden border border-slate-200 dark:border-zinc-800 resume-content">
+    <div className="relative bg-white dark:bg-zinc-900 shadow-lg rounded-xl overflow-hidden border border-slate-200 dark:border-zinc-800 resume-content">
       <BorderBeam
         className="print-hidden"
-        size={800}
+        size={700}
         duration={20}
         delay={0.5}
-        colorFrom="emerald"
+        colorFrom="#059669"
       />
 
       {/* En-tête du CV */}

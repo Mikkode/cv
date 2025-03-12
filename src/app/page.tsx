@@ -21,7 +21,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="flex h-screen justify-center items-center">
+    <div className="flex h-screen justify-center items-center bg-gradient-to-br from-slate-50 to-white dark:from-zinc-950 dark:to-zinc-900 p-4">
       {!showCV ? (
         <TerminalLoader />
       ) : (
