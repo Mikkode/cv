@@ -10,9 +10,40 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  title: "CV - Développeur Fullstack",
+  title: "CV - Développeur Fullstack | Next.js, React, Node.js, TypeScript",
   description:
-    "CV de développeur fullstack spécialisé en Next.js, React, Node.js et TypeScript",
+    "CV développeur fullstack spécialisé en Next.js, React, Node.js et TypeScript. Expertise en développement web moderne SAAS et applications performantes.",
+  keywords: [
+    "développeur fullstack",
+    "Next.js",
+    "React",
+    "Node.js",
+    "TypeScript",
+    "développeur web",
+    "SAAS",
+  ],
+  authors: [{ name: "Mickaël WARIN" }],
+  openGraph: {
+    title: "CV - Développeur Fullstack | Next.js, React, Node.js, TypeScript",
+    description:
+      "CV développeur fullstack spécialisé en Next.js, React, Node.js et TypeScript. Expertise en développement web moderne SAAS et applications performantes.",
+    type: "website",
+    locale: "fr_FR",
+    url: "https://cv.carrotpixel.fr",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "CV - Développeur Fullstack | Next.js, React, Node.js, TypeScript",
+    description:
+      "CV développeur fullstack spécialisé en Next.js, React, Node.js et TypeScript. Expertise en développement web moderne SAAS et applications performantes.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  alternates: {
+    canonical: "https://cv.carrotpixel.fr",
+  },
 };
 
 export default function RootLayout({
@@ -24,11 +55,16 @@ export default function RootLayout({
     <html lang="fr" suppressHydrationWarning>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
         <link
           href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
           rel="stylesheet"
         />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </head>
       <body className={`${roboto.variable} font-sans`}>
         <ThemeProvider
