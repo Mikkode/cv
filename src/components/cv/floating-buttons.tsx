@@ -33,7 +33,7 @@ export function FloatingButtons() {
   };
 
   return (
-    <div className="flex justify-end gap-2 mb-4 print-hidden">
+    <div className="flex justify-end max-w-4xl gap-2 mb-4 print-hidden">
       <Button
         variant="outline"
         size="icon"
