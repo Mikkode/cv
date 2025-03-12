@@ -65,8 +65,27 @@ export default function RootLayout({
               color: black !important;
             }
             
+            /* Style for section headers in print */
+            h2.bg-slate-100 {
+              background-color: #f1f5f9 !important;
+              border-bottom: 2px solid #10b981 !important;
+              border-radius: 4px !important;
+            }
+            
+            /* Style for experience titles in print */
+            h3.border-l-4 {
+              border-left: 4px solid #10b981 !important;
+            }
+            
+            /* Style for subsection headers in print */
+            h3.border-b-2 {
+              border-bottom: 2px solid rgba(16, 185, 129, 0.3) !important;
+            }
+            
             /* Style for checkmark icons in print */
-            svg.text-emerald-500 {
+            svg.text-emerald-500, 
+            svg.text-emerald-600, 
+            svg.text-emerald-400 {
               color: #059669 !important;
             }
             

@@ -2,7 +2,7 @@
 
 import { useTheme } from "next-themes";
 import { Button } from "@/components/ui/button";
-import { Moon, Sun } from "lucide-react";
+import { Moon, Sun, Printer, Download } from "lucide-react";
 import { useState, useEffect } from "react";
 import { TerminalLoader } from "@/components/cv/terminal-loader";
 import { ProfileCard } from "@/components/cv/profile-card";
@@ -13,17 +13,21 @@ import { LanguagesCard } from "@/components/cv/languages-card";
 
 export default function Home() {
   const { theme, setTheme } = useTheme();
-  const [showCV, setShowCV] = useState(true);
+  const [showCV, setShowCV] = useState(false);
 
   const toggleTheme = () => {
     setTheme(theme === "dark" ? "light" : "dark");
+  };
+
+  const handlePrint = () => {
+    window.print();
   };
 
   useEffect(() => {
     // Afficher le CV après un délai pour laisser le temps au terminal de s'afficher
     const timer = setTimeout(() => {
       setShowCV(true);
-    }, 4700);
+    }, 4800);
     return () => clearTimeout(timer);
   }, []);
 
@@ -33,6 +37,29 @@ export default function Home() {
         <TerminalLoader />
       ) : (
         <div className="container mx-auto py-4 px-3 relative">
+          {/* Boutons d'action flottants */}
+          <div className="fixed top-4 right-4 flex flex-col gap-2 print-hidden">
+            <Button
+              variant="outline"
+              size="icon"
+              className="rounded-full shadow-md bg-white/80 dark:bg-zinc-800/80 backdrop-blur-sm border-0"
+              onClick={handlePrint}
+              aria-label="Imprimer le CV"
+            >
+              <Printer className="h-[1.2rem] w-[1.2rem]" />
+            </Button>
+            <Button
+              variant="outline"
+              size="icon"
+              className="rounded-full shadow-md bg-white/80 dark:bg-zinc-800/80 backdrop-blur-sm border-0"
+              onClick={toggleTheme}
+              aria-label="Changer de thème"
+            >
+              <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+              <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+            </Button>
+          </div>
+
           <div className="max-w-6xl mx-auto bg-white dark:bg-zinc-900 shadow-lg rounded-lg overflow-hidden border border-slate-200 dark:border-zinc-800">
             {/* En-tête du CV */}
             <div className="p-3 border-b border-slate-200 dark:border-zinc-800 text-center">
@@ -49,7 +76,7 @@ export default function Home() {
               {/* Colonne de gauche */}
               <div className="md:w-1/4 p-3 border-r border-slate-200 dark:border-zinc-800">
                 <div className="space-y-4">
-                  <ProfileCard />
+                  <ProfileCard showPrintButton={false} />
                   <div className="border-t border-slate-200 dark:border-zinc-800 pt-4">
                     <LanguagesCard />
                   </div>
@@ -72,18 +99,6 @@ export default function Home() {
           </div>
         </div>
       )}
-
-      {/* Bouton de changement de thème */}
-      <Button
-        variant="outline"
-        size="icon"
-        className="fixed bottom-4 right-4 rounded-full shadow-md bg-white/80 dark:bg-zinc-800/80 backdrop-blur-sm border-0 print-hidden"
-        onClick={toggleTheme}
-        aria-label="Changer de thème"
-      >
-        <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-        <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-      </Button>
     </div>
   );
 }

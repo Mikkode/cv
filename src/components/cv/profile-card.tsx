@@ -14,7 +14,11 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 
-export function ProfileCard() {
+interface ProfileCardProps {
+  showPrintButton?: boolean;
+}
+
+export function ProfileCard({ showPrintButton = true }: ProfileCardProps) {
   const handlePrint = () => {
     window.print();
   };
@@ -22,43 +26,41 @@ export function ProfileCard() {
   return (
     <div>
       <div className="flex flex-col items-center mb-3">
-        <Avatar className="size-20 border-2 border-slate-100 dark:border-zinc-800 shadow-sm mb-2">
-          <AvatarImage
-            src="https://github.com/shadcn.png"
-            alt="Photo de profil"
-          />
+        <Avatar className="h-24 w-24 mb-2">
+          <AvatarImage src="/avatar.jpg" alt="Mickaël WARIN" />
           <AvatarFallback>MW</AvatarFallback>
         </Avatar>
       </div>
 
-      <div className="space-y-1.5 mb-3">
-        <div className="flex items-center gap-1.5 text-slate-700 dark:text-slate-300">
-          <MapPin className="size-3.5 text-slate-500 flex-shrink-0" />
-          <span className="text-sm">Guyancourt, France</span>
+      <div className="space-y-2">
+        <div className="flex items-center gap-1.5">
+          <MapPin className="size-3.5 text-slate-500" />
+          <span className="text-sm text-slate-600 dark:text-slate-400">
+            Paris, France
+          </span>
         </div>
-
-        <div className="flex items-center gap-1.5 text-slate-700 dark:text-slate-300">
-          <Mail className="size-3.5 text-slate-500 flex-shrink-0" />
-          <span className="text-sm">mic.warin@gmail.com</span>
+        <div className="flex items-center gap-1.5">
+          <Mail className="size-3.5 text-slate-500" />
+          <span className="text-sm text-slate-600 dark:text-slate-400">
+            mickael.warin@example.com
+          </span>
         </div>
-
-        <div className="flex items-center gap-1.5 text-slate-700 dark:text-slate-300">
-          <Phone className="size-3.5 text-slate-500 flex-shrink-0" />
-          <span className="text-sm">+33 6 12 34 56 78</span>
+        <div className="flex items-center gap-1.5">
+          <Phone className="size-3.5 text-slate-500" />
+          <span className="text-sm text-slate-600 dark:text-slate-400">
+            +33 6 12 34 56 78
+          </span>
         </div>
-
-        <div className="flex items-center gap-1.5 text-slate-700 dark:text-slate-300">
-          <Globe className="size-3.5 text-slate-500 flex-shrink-0" />
-          <span className="text-sm">carrotpixel.fr</span>
+        <div className="flex items-center gap-1.5">
+          <Globe className="size-3.5 text-slate-500" />
+          <span className="text-sm text-slate-600 dark:text-slate-400">
+            carrotpixel.fr
+          </span>
         </div>
       </div>
 
-      <div className="flex gap-1.5 mb-3">
-        <Link
-          href="https://github.com/username"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+      <div className="flex items-center gap-1.5 mt-3">
+        <Link href="https://github.com/carrotpixel" target="_blank">
           <Button
             size="icon"
             variant="outline"
@@ -67,11 +69,7 @@ export function ProfileCard() {
             <Github className="size-3.5 text-slate-700 dark:text-slate-300" />
           </Button>
         </Link>
-        <Link
-          href="https://linkedin.com/in/username"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <Link href="https://linkedin.com/in/carrotpixel" target="_blank">
           <Button
             size="icon"
             variant="outline"
@@ -80,7 +78,7 @@ export function ProfileCard() {
             <Linkedin className="size-3.5 text-slate-700 dark:text-slate-300" />
           </Button>
         </Link>
-        <Link href="mailto:mic.warin@gmail.com">
+        <Link href="mailto:mickael.warin@example.com">
           <Button
             size="icon"
             variant="outline"
@@ -89,14 +87,16 @@ export function ProfileCard() {
             <Mail className="size-3.5 text-slate-700 dark:text-slate-300" />
           </Button>
         </Link>
-        <Button
-          variant="default"
-          size="sm"
-          className="flex-1 gap-1 text-xs h-7 bg-slate-800 hover:bg-slate-700 dark:bg-slate-700 dark:hover:bg-slate-600 text-white"
-          onClick={handlePrint}
-        >
-          <Printer className="size-3.5" /> Imprimer CV
-        </Button>
+        {showPrintButton && (
+          <Button
+            variant="default"
+            size="sm"
+            className="flex-1 gap-1 text-xs h-7 bg-slate-800 hover:bg-slate-700 dark:bg-slate-700 dark:hover:bg-slate-600 text-white"
+            onClick={handlePrint}
+          >
+            <Printer className="size-3.5" /> Imprimer CV
+          </Button>
+        )}
       </div>
     </div>
   );

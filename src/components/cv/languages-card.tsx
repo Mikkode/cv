@@ -6,14 +6,14 @@ import Image from "next/image";
 export function LanguagesCard() {
   return (
     <div>
-      <h2 className="text-base font-semibold text-slate-900 dark:text-white mb-4 flex items-center">
-        <Globe className="mr-1.5 size-4 text-slate-500" />
+      <h2 className="text-base font-semibold text-slate-900 dark:text-white mb-4 flex items-center bg-slate-100 dark:bg-zinc-800 p-2 rounded-md">
+        <Globe className="mr-1.5 size-4 text-emerald-600 dark:text-emerald-400" />
         Langues & Soft Skills
       </h2>
 
       <div className="space-y-7">
         <div>
-          <h3 className="font-medium text-slate-900 dark:text-white text-sm mb-2 border-b border-slate-200 dark:border-zinc-800 pb-0.5">
+          <h3 className="font-medium text-slate-900 dark:text-white text-sm mb-2 border-b-2 border-emerald-500/30 dark:border-emerald-500/30 pb-1">
             Langues
           </h3>
           <div className="space-y-2">
@@ -59,8 +59,8 @@ export function LanguagesCard() {
         </div>
 
         <div>
-          <h3 className="font-medium text-slate-900 dark:text-white text-sm mb-2 border-b border-slate-200 dark:border-zinc-800 pb-0.5 flex items-center">
-            <Brain className="mr-1.5 size-3.5 text-slate-500" />
+          <h3 className="font-medium text-slate-900 dark:text-white text-sm mb-2 border-b-2 border-emerald-500/30 dark:border-emerald-500/30 pb-1 flex items-center">
+            <Brain className="mr-1.5 size-3.5 text-emerald-600 dark:text-emerald-400" />
             Soft Skills
           </h3>
           <div className="grid grid-cols-2 gap-y-2">
