@@ -8,7 +8,7 @@ import Image from "next/image";
 
 export function ProfileCard() {
   return (
-    <div>
+    <div className="w-full">
       <div className="flex flex-col items-center mb-3">
         <div className="h-24 w-24 mb-2 rounded-full overflow-hidden relative">
           <Image
@@ -31,8 +31,8 @@ export function ProfileCard() {
         </div>
         <div className="flex items-start gap-1.5">
           <Mail className="size-4 text-slate-500 flex-shrink-0 mt-0.5" />
-          <span className="text-sm text-slate-600 dark:text-slate-400 break-words">
-            mickael.warin@example.com
+          <span className="text-sm text-slate-600 dark:text-slate-400 break-all">
+            mic.warin@gmail.com
           </span>
         </div>
         <div className="flex items-start gap-1.5">

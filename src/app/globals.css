@@ -415,14 +415,34 @@
   }
 
   /* Adjust badge colors for better printing */
-  .badge {
-    border: 1px solid #ddd !important;
-    background-color: #f8f8f8 !important;
-    color: #333 !important;
+  .badge,
+  [class*="badge"] {
+    display: inline-flex !important;
+    align-items: center !important;
+    border: 1px solid #e2e8f0 !important;
+    background-color: #f8fafc !important;
+    color: #334155 !important;
     font-size: 8pt !important;
-    padding: 0.1rem 0.2rem !important;
-    height: auto !important;
+    padding: 0.1rem 0.3rem !important;
+    border-radius: 9999px !important;
     margin: 0.1rem !important;
+    font-weight: 500 !important;
+  }
+
+  /* Style for icons in badges */
+  .badge svg,
+  [class*="badge"] svg {
+    width: 10px !important;
+    height: 10px !important;
+    margin-right: 0.2rem !important;
+    color: #059669 !important;
+  }
+
+  /* Ajuster l'espacement des badges */
+  .flex.flex-wrap.gap-1\\.5 {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 0.2rem !important;
   }
 
   /* Force desktop layout for printing */
@@ -516,5 +536,127 @@
     word-break: break-word !important;
     overflow-wrap: break-word !important;
     max-width: 100% !important;
+  }
+
+  /* Assurer que les emails longs se coupent correctement */
+  .break-all {
+    word-break: break-all !important;
+    overflow-wrap: break-word !important;
+    max-width: 100% !important;
+  }
+
+  /* Assurer que les soft skills ne débordent pas */
+  .truncate {
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+  }
+
+  /* Ajuster la largeur des colonnes pour les soft skills */
+  .grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 0.25rem !important;
+  }
+
+  /* Réduire le padding des badges de soft skills */
+  .bg-slate-100.rounded {
+    padding: 0.1rem 0.2rem !important;
+    font-size: 8pt !important;
+  }
+
+  /* Styles pour les barres de progression en impression */
+  [role="progressbar"] {
+    height: 4px !important;
+    background-color: #e2e8f0 !important;
+    border-radius: 9999px !important;
+    overflow: hidden !important;
+    position: relative !important;
+  }
+
+  /* Style pour l'indicateur de progression */
+  [role="progressbar"] > div {
+    height: 100% !important;
+    background: linear-gradient(to right, #10b981, #34d399) !important;
+    border-radius: 9999px !important;
+  }
+
+  /* Ajuster l'espacement des skills */
+  .space-y-3 > div {
+    margin-bottom: 0.5rem !important;
+  }
+
+  /* Style pour les pourcentages */
+  .text-xs.text-slate-500 {
+    font-size: 7pt !important;
+    color: #64748b !important;
+  }
+
+  /* Style pour les noms de compétences */
+  .text-sm.font-medium.text-slate-700 {
+    font-size: 9pt !important;
+    color: #334155 !important;
+    font-weight: 500 !important;
+  }
+
+  /* Styles pour les soft skills en impression */
+  .size-4.text-emerald-500,
+  .size-4.text-emerald-500\\/80,
+  .size-4.text-emerald-500\\/60 {
+    color: #059669 !important;
+    width: 12px !important;
+    height: 12px !important;
+    margin-right: 4px !important;
+  }
+
+  /* Style pour les niveaux de compétence */
+  .text-xs.text-slate-500.font-medium {
+    font-size: 7pt !important;
+    color: #64748b !important;
+    font-style: italic !important;
+  }
+
+  /* Ajuster l'espacement des éléments de compétence */
+  .flex.items-center.justify-between {
+    margin-bottom: 0.2rem !important;
+    padding: 0.1rem 0 !important;
+  }
+
+  /* Style pour les icônes de soft skills */
+  .flex-shrink-0.text-emerald-500 svg {
+    color: #059669 !important;
+    width: 10px !important;
+    height: 10px !important;
+    margin-right: 0 !important;
+    margin-top: 2px !important;
+    flex-shrink: 0 !important;
+  }
+
+  /* Ajuster la grille pour les soft skills */
+  .grid.grid-cols-2.gap-x-1.gap-y-2 {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    column-gap: 0.5rem !important;
+    row-gap: 0.25rem !important;
+    width: 100% !important;
+  }
+
+  /* Ajuster l'espacement des éléments de compétence */
+  .flex.items-start.gap-1\\.5 {
+    display: flex !important;
+    align-items: flex-start !important;
+    gap: 0.25rem !important;
+    margin-bottom: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+  }
+
+  /* Style pour les noms de compétences */
+  .flex.items-start.gap-1\\.5 .text-sm {
+    font-size: 8pt !important;
+    color: #334155 !important;
+    line-height: 1.2 !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+    width: calc(100% - 15px) !important;
   }
 }
