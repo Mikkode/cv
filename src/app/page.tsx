@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+// import { useState } from "react";
 import { TerminalLoader } from "@/components/cv/terminal-loader";
 import { ResumeContent } from "@/components/cv/resume-content";
 
