@@ -21,7 +21,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-white dark:from-zinc-950 dark:to-zinc-900 flex items-center justify-center py-8 px-4">
+    <div className="flex h-screen justify-center items-center">
       {!showCV ? (
         <TerminalLoader />
       ) : (
