@@ -25,7 +25,7 @@ export default function Home() {
       {!showCV ? (
         <TerminalLoader />
       ) : (
-        <div className="relative w-full max-w-6xl">
+        <div className="w-full max-w-6xl">
           <FloatingButtons onPrint={handlePrint} />
           <ResumeContent />
         </div>

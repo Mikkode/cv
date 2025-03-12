@@ -35,23 +35,38 @@ export default function RootLayout({
             body {
               background: white !important;
               color: black !important;
-            }
-            
-            .container {
+              margin: 0 !important;
               padding: 0 !important;
-              max-width: 100% !important;
             }
             
+            /* Masquer tous les éléments sauf le CV */
+            .min-h-screen {
+              display: block !important;
+              height: auto !important;
+              padding: 0 !important;
+              margin: 0 !important;
+              background: none !important;
+            }
+            
+            /* Masquer les éléments d'interface */
+            .print-hidden {
+              display: none !important;
+            }
+            
+            /* Optimiser le conteneur du CV */
             .max-w-6xl {
               max-width: 100% !important;
               margin: 0 !important;
+              padding: 0 !important;
+            }
+            
+            /* Optimiser le CV lui-même */
+            .resume-content {
               border: none !important;
               box-shadow: none !important;
               border-radius: 0 !important;
-            }
-            
-            .fixed, .print-hidden {
-              display: none !important;
+              margin: 0 !important;
+              width: 100% !important;
             }
             
             /* Force background colors for printing */

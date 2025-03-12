@@ -16,11 +16,11 @@ export function FloatingButtons({ onPrint }: FloatingButtonsProps) {
   };
 
   return (
-    <div className="fixed top-4 right-4 flex flex-col gap-2 print-hidden">
+    <div className="flex justify-end gap-2 mb-4 print-hidden">
       <Button
         variant="outline"
         size="icon"
-        className="rounded-full shadow-md bg-white/80 dark:bg-zinc-800/80 backdrop-blur-sm border-0"
+        className="rounded-full shadow-md bg-white/90 dark:bg-zinc-800/90 backdrop-blur-sm border-0"
         onClick={onPrint}
         aria-label="Imprimer le CV"
       >
@@ -29,7 +29,7 @@ export function FloatingButtons({ onPrint }: FloatingButtonsProps) {
       <Button
         variant="outline"
         size="icon"
-        className="rounded-full shadow-md bg-white/80 dark:bg-zinc-800/80 backdrop-blur-sm border-0"
+        className="rounded-full shadow-md bg-white/90 dark:bg-zinc-800/90 backdrop-blur-sm border-0"
         onClick={toggleTheme}
         aria-label="Changer de thème"
       >
