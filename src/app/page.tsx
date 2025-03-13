@@ -6,10 +6,9 @@ import { TerminalLoader } from "@/components/cv/terminal-loader";
 import { ResumeContent } from "@/components/cv/resume-content";
 
 export default function Home() {
-  const [isAnimating, setIsAnimating] = useState(false);
+  const [isAnimating, setIsAnimating] = useState(true);
 
   const handleTerminalLoadingComplete = () => {
-    console.log("Terminal loading complete");
     setIsAnimating(true);
   };
 

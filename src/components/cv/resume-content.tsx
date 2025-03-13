@@ -16,6 +16,14 @@ export function ResumeContent() {
         colorFrom="#059669"
       />
 
+      <BorderBeam
+        className="print-hidden"
+        size={700}
+        duration={20}
+        delay={10}
+        colorFrom="#059669"
+      />
+
       {/* En-tête du CV */}
       <div className="p-3 border-b border-slate-200 dark:border-zinc-800 text-center">
         <h1 className="text-2xl font-bold tracking-tight text-slate-900 dark:text-white">
