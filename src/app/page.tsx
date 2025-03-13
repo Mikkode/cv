@@ -4,23 +4,16 @@ import { useState, useRef } from "react";
 import { motion } from "framer-motion";
 import { TerminalLoader } from "@/components/cv/terminal-loader";
 import { ResumeContent } from "@/components/cv/resume-content";
-import { useReactToPrint } from "react-to-print";
 import ButtonTheme from "@/components/button-theme";
-import { Download, Link } from "lucide-react";
 import ButtonDownload from "@/components/button-download";
 
 export default function Home() {
-  const [isAnimating, setIsAnimating] = useState(true);
+  const [isAnimating, setIsAnimating] = useState(false);
   const resumeRef = useRef<HTMLDivElement>(null);
 
   const handleTerminalLoadingComplete = () => {
     setIsAnimating(true);
   };
-
-  const handlePrint = useReactToPrint({
-    documentTitle: "CV",
-    contentRef: resumeRef,
-  });
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-white dark:from-zinc-950 dark:to-zinc-900 p-4 overflow-auto">

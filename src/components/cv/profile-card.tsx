@@ -61,9 +61,10 @@ export function ProfileCard() {
             À propos
           </h3>
           <p className="text-sm text-slate-600 dark:text-slate-300">
-            Passionné par le développement, j'aime créer des applications
-            performantes et bien pensées. J'accorde une grande importance à la
-            qualité du code, à la sécurité et à l'expérience utilisateur.
+            Passionné par le développement, j&apos;aime créer des applications
+            performantes et bien pensées. J&apos;accorde une grande importance à
+            la qualité du code, à la sécurité et à l&apos;expérience
+            utilisateur.
           </p>
         </div>
       </div>
