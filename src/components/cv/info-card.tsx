@@ -13,7 +13,7 @@ export function InfoCard() {
             alt="Mickaël WARIN"
             width={96}
             height={96}
-            className="object-cover"
+            className="object-cover w-full h-full"
             priority
           />
         </div>

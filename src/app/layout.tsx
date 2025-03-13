@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   creator: "Mickaël WARIN",
   publisher: "Mickaël WARIN",
   icons: {
-    icon: [{ url: "/favicon.png", sizes: "any" }],
+    icon: [{ url: "/favicon.ico", sizes: "any" }],
   },
   openGraph: {
     title: "CV - Développeur Fullstack | Next.js, React, Node.js, TypeScript",
@@ -70,7 +70,7 @@ export default function RootLayout({
         <LanguageProvider>
           <ThemeProvider
             attribute="class"
-            defaultTheme="system"
+            defaultTheme="dark"
             enableSystem
             disableTransitionOnChange
           >

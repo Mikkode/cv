@@ -4,8 +4,11 @@ import { Code2 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { useLanguage } from "@/contexts/language-context";
 
+// Définir un type pour les IDs de catégories
+type CategoryId = "frontend" | "backend" | "devops" | "other";
+
 type SkillCategory = {
-  id: string;
+  id: CategoryId; // Utiliser le type spécifique au lieu de string
   colorClass: string;
   skills: string[];
 };
@@ -113,7 +116,7 @@ export function SkillsCard() {
           <SkillSection
             key={category.id}
             category={category}
-            title={dictionary.skills.categories[category.id]}
+            title={dictionary.skills.categories[category.id as CategoryId]}
           />
         ))}
       </div>
