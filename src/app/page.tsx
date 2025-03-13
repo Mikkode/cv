@@ -4,8 +4,10 @@ import { useState, useRef } from "react";
 import { motion } from "framer-motion";
 import { TerminalLoader } from "@/components/cv/terminal-loader";
 import { ResumeContent } from "@/components/cv/resume-content";
-import { FloatingButtons } from "@/components/cv/floating-buttons";
 import { useReactToPrint } from "react-to-print";
+import ButtonTheme from "@/components/button-theme";
+import { Download, Link } from "lucide-react";
+import ButtonDownload from "@/components/button-download";
 
 export default function Home() {
   const [isAnimating, setIsAnimating] = useState(true);
@@ -24,10 +26,13 @@ export default function Home() {
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-white dark:from-zinc-950 dark:to-zinc-900 p-4 overflow-auto">
       <div className="flex w-full h-full flex-col lg:flex-row justify-center items-start gap-4">
         {/* Terminal - normal en mobile, sticky en desktop */}
-        <div className="w-full lg:w-auto lg:flex-shrink lg:min-w-[250px] lg:h-fit">
+        <div className="w-full lg:w-auto lg:flex-shrink lg:min-w-[250px] lg:h-fit flex flex-col items-center gap-2">
           <TerminalLoader onLoadingComplete={handleTerminalLoadingComplete} />
+          <div className="flex space-x-4 mt-2">
+            <ButtonTheme />
+            <ButtonDownload />
+          </div>
         </div>
-        <FloatingButtons onPrintPDF={handlePrint} />
 
         {/* CV - prioritaire avec taille minimale et maximale */}
         <motion.div
