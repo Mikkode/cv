@@ -4,7 +4,11 @@ import { Button } from "@/components/ui/button";
 import { Moon, Sun, Printer } from "lucide-react";
 import { useTheme } from "next-themes";
 
-export function FloatingButtons() {
+interface FloatingButtonsProps {
+  onPrintPDF: () => void;
+}
+
+export function FloatingButtons({ onPrintPDF }: FloatingButtonsProps) {
   const { theme, setTheme } = useTheme();
 
   const toggleTheme = () => {
@@ -12,28 +16,11 @@ export function FloatingButtons() {
   };
 
   const handlePrint = () => {
-    // Forcer le thème clair pour l'impression
-    const currentTheme = theme;
-    if (theme === "dark") {
-      setTheme("light");
-    }
-
-    // Attendre que le DOM soit mis à jour
-    setTimeout(() => {
-      // Imprimer
-      window.print();
-
-      // Restaurer le thème
-      if (currentTheme === "dark") {
-        setTimeout(() => {
-          setTheme(currentTheme);
-        }, 100);
-      }
-    }, 100);
+    onPrintPDF();
   };
 
   return (
-    <div className="flex justify-end max-w-4xl gap-2 mb-4 print-hidden">
+    <div className="flex flex-col gap-2">
       <Button
         variant="outline"
         size="icon"

@@ -35,9 +35,9 @@ export function ResumeContent() {
       </div>
 
       {/* Corps du CV */}
-      <div className="flex flex-col md:flex-row">
+      <div className="flex flex-col md:flex-row print:!flex-row print:!w-[21cm]">
         {/* Colonne de gauche */}
-        <div className="md:w-1/4 p-3 border-r border-slate-200 dark:border-zinc-800">
+        <div className="md:w-1/4 p-3 border-r border-slate-200 dark:border-zinc-800 print:!w-[5cm] print:!flex-none">
           <div className="space-y-4">
             <ProfileCard />
             <div className="border-t border-slate-200 dark:border-zinc-800 pt-4">
@@ -47,7 +47,7 @@ export function ResumeContent() {
         </div>
 
         {/* Colonne de droite */}
-        <div className="md:w-3/4 p-3">
+        <div className="md:w-3/4 p-3 print:!flex-1">
           <div className="space-y-4">
             <ExperienceCard />
             <div className="border-t border-slate-200 dark:border-zinc-800 pt-4 mt-4">

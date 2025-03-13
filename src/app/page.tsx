@@ -1,16 +1,24 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { motion } from "framer-motion";
 import { TerminalLoader } from "@/components/cv/terminal-loader";
 import { ResumeContent } from "@/components/cv/resume-content";
+import { FloatingButtons } from "@/components/cv/floating-buttons";
+import { useReactToPrint } from "react-to-print";
 
 export default function Home() {
   const [isAnimating, setIsAnimating] = useState(true);
+  const resumeRef = useRef<HTMLDivElement>(null);
 
   const handleTerminalLoadingComplete = () => {
     setIsAnimating(true);
   };
+
+  const handlePrint = useReactToPrint({
+    documentTitle: "CV",
+    contentRef: resumeRef,
+  });
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-white dark:from-zinc-950 dark:to-zinc-900 p-4 overflow-auto">
@@ -19,6 +27,7 @@ export default function Home() {
         <div className="w-full lg:w-auto lg:flex-shrink lg:min-w-[250px] lg:h-fit">
           <TerminalLoader onLoadingComplete={handleTerminalLoadingComplete} />
         </div>
+        <FloatingButtons onPrintPDF={handlePrint} />
 
         {/* CV - prioritaire avec taille minimale et maximale */}
         <motion.div
@@ -35,7 +44,9 @@ export default function Home() {
           }}
           className="w-full lg:min-w-3xl lg:max-w-4xl"
         >
-          <ResumeContent />
+          <div ref={resumeRef}>
+            <ResumeContent />
+          </div>
         </motion.div>
       </div>
     </div>

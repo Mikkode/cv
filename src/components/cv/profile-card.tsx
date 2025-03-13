@@ -2,12 +2,13 @@ import { Button } from "@/components/ui/button";
 import { Github, Linkedin, Mail, MapPin, Globe } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
 
 export function ProfileCard() {
   return (
     <div className="w-full">
-      <div className="flex flex-col items-center mb-3">
-        <div className="h-24 w-24 mb-2 rounded-full overflow-hidden relative">
+      <div className="flex flex-col items-center mb-3 print:!flex print:!items-center print:!justify-center">
+        <div className="h-24 w-24 mb-2 rounded-full overflow-hidden print:!mx-auto">
           <Image
             src="/picture.png"
             alt="Mickaël WARIN"
@@ -23,7 +24,7 @@ export function ProfileCard() {
         <div className="flex items-start gap-1.5">
           <MapPin className="size-4 text-slate-500 flex-shrink-0 mt-0.5" />
           <span className="text-sm text-slate-600 dark:text-slate-400 break-words">
-            Paris, France
+            Guyancourt, France
           </span>
         </div>
         <div className="flex items-start gap-1.5">
