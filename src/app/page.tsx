@@ -21,10 +21,15 @@ export default function Home() {
         {/* Terminal - normal en mobile, sticky en desktop */}
         <div className="w-full lg:w-auto lg:flex-shrink lg:min-w-[250px] lg:h-fit flex flex-col items-center gap-2">
           <TerminalLoader onLoadingComplete={handleTerminalLoadingComplete} />
-          <div className="flex space-x-4 mt-2">
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={isAnimating ? { opacity: 1 } : {}}
+            transition={{ duration: 2, ease: "easeIn" }}
+            className="flex space-x-4 mt-2"
+          >
             <ButtonTheme />
             <ButtonDownload />
-          </div>
+          </motion.div>
         </div>
 
         {/* CV - prioritaire avec taille minimale et maximale */}
