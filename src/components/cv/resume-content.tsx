@@ -1,9 +1,9 @@
 import { BorderBeam } from "@/components/magicui/border-beam";
-import { ProfileCard } from "@/components/cv/profile-card";
 import { SkillsCard } from "@/components/cv/skills-card";
 import { ExperienceCard } from "@/components/cv/experience-card";
 import { EducationCard } from "@/components/cv/education-card";
-import { LanguagesCard } from "@/components/cv/languages-card";
+import { InfoCard } from "./info-card";
+import { ProfileCard } from "./profile-card";
 
 export function ResumeContent() {
   return (
@@ -39,9 +39,9 @@ export function ResumeContent() {
         {/* Colonne de gauche */}
         <div className="md:w-1/4 p-3 border-r border-slate-200 dark:border-zinc-800 print:!w-[5cm] print:!flex-none">
           <div className="space-y-4">
-            <ProfileCard />
+            <InfoCard />
             <div className="border-t border-slate-200 dark:border-zinc-800 pt-4">
-              <LanguagesCard />
+              <ProfileCard />
             </div>
           </div>
         </div>

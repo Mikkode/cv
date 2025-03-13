@@ -11,7 +11,7 @@ export function EducationCard() {
       <div>
         <div className="flex justify-between items-start mb-1">
           <h3 className="font-medium text-base text-slate-900 dark:text-white border-l-4 border-emerald-500 pl-2 py-0.5">
-            Master en Développement Informatique
+            Master – Développement & Architecture Logicielle
           </h3>
           <span className="text-xs font-medium px-1.5 py-0.5 bg-slate-100 dark:bg-zinc-800 rounded-full text-slate-700 dark:text-slate-300">
             2014 - 2017

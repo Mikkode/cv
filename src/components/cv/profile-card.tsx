@@ -1,79 +1,71 @@
-import { Button } from "@/components/ui/button";
-import { Github, Linkedin, Mail, MapPin, Globe } from "lucide-react";
-import Link from "next/link";
-import Image from "next/image";
-import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
+import { UserCircle } from "lucide-react";
+import { SoftSkills } from "@/components/cv/soft-skills";
 
 export function ProfileCard() {
   return (
-    <div className="w-full">
-      <div className="flex flex-col items-center mb-3 print:!flex print:!items-center print:!justify-center">
-        <div className="h-24 w-24 mb-2 rounded-full overflow-hidden print:!mx-auto">
-          <Image
-            src="/picture.png"
-            alt="Mickaël WARIN"
-            width={96}
-            height={96}
-            className="object-cover"
-            priority
-          />
-        </div>
-      </div>
+    <div>
+      <h2 className="text-base font-semibold text-slate-900 dark:text-white mb-4 flex items-center justify-center bg-slate-100 dark:bg-zinc-800 p-2 rounded-md">
+        <UserCircle className="mr-1.5 size-4 text-emerald-600 dark:text-emerald-400" />
+        Profil
+      </h2>
 
-      <div className="space-y-2">
-        <div className="flex items-start gap-1.5">
-          <MapPin className="size-4 text-slate-500 flex-shrink-0 mt-0.5" />
-          <span className="text-sm text-slate-600 dark:text-slate-400 break-words">
-            Guyancourt, France
-          </span>
+      <div className="space-y-7">
+        <div className="space-y-3">
+          <h3 className="text-base font-medium border-b-2 border-emerald-100 dark:border-emerald-950 pb-1">
+            Langues
+          </h3>
+          <div className="space-y-2 ">
+            <div className="flex justify-between items-center">
+              <span className="text-sm">Français</span>
+              <div className="flex gap-0.5">
+                {[...Array(5)].map((_, i) => (
+                  <div
+                    key={i}
+                    className="h-2 w-2 rounded-full bg-emerald-500"
+                  ></div>
+                ))}
+              </div>
+            </div>
+            <div className="flex justify-between items-center">
+              <span className="text-sm">Anglais</span>
+              <div className="flex gap-0.5">
+                {[...Array(5)].map((_, i) => (
+                  <div
+                    key={i}
+                    className={`h-2 w-2 rounded-full ${
+                      i < 4 ? "bg-emerald-500" : "bg-slate-200 dark:bg-zinc-700"
+                    }`}
+                  ></div>
+                ))}
+              </div>
+            </div>
+            <div className="flex justify-between items-center">
+              <span className="text-sm">Japonais</span>
+              <div className="flex gap-0.5">
+                {[...Array(5)].map((_, i) => (
+                  <div
+                    key={i}
+                    className={`h-2 w-2 rounded-full ${
+                      i < 2 ? "bg-emerald-500" : "bg-slate-200 dark:bg-zinc-700"
+                    }`}
+                  ></div>
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
-        <div className="flex items-start gap-1.5">
-          <Mail className="size-4 text-slate-500 flex-shrink-0 mt-0.5" />
-          <span className="text-sm text-slate-600 dark:text-slate-400 break-all">
-            <a href="mailto:mic.warin@gmail.com">mic.warin@gmail.com</a>
-          </span>
-        </div>
-        <div className="flex items-start gap-1.5">
-          <Globe className="size-4 text-slate-500 flex-shrink-0 mt-0.5" />
-          <span className="text-sm text-slate-600 dark:text-slate-400 break-words">
-            <Link href="https://carrotpixel.fr" target="_blank">
-              carrotpixel.fr
-            </Link>
-          </span>
-        </div>
-      </div>
 
-      <div className="flex items-center justify-center gap-2 mt-3">
-        <Link href="https://github.com/mikkode" target="_blank">
-          <Button
-            size="icon"
-            variant="outline"
-            className="h-8 w-8 cursor-pointer rounded-full bg-white dark:bg-zinc-800 border-slate-200 dark:border-zinc-700 hover:bg-slate-100 dark:hover:bg-zinc-700"
-          >
-            <Github className="size-4 text-slate-700 dark:text-slate-300" />
-          </Button>
-        </Link>
-        <Link
-          href="https://www.linkedin.com/in/micka%C3%ABl-warin-4b0275a4/"
-          target="_blank"
-        >
-          <Button
-            size="icon"
-            variant="outline"
-            className="h-8 w-8 cursor-pointer rounded-full bg-white dark:bg-zinc-800 border-slate-200 dark:border-zinc-700 hover:bg-slate-100 dark:hover:bg-zinc-700"
-          >
-            <Linkedin className="size-4 text-slate-700 dark:text-slate-300" />
-          </Button>
-        </Link>
-        <Link href="mailto:mic.warin@gmail.com">
-          <Button
-            size="icon"
-            variant="outline"
-            className="h-8 w-8 cursor-pointer rounded-full bg-white dark:bg-zinc-800 border-slate-200 dark:border-zinc-700 hover:bg-slate-100 dark:hover:bg-zinc-700"
-          >
-            <Mail className="size-4 text-slate-700 dark:text-slate-300" />
-          </Button>
-        </Link>
+        <SoftSkills />
+        <div className="space-y-3">
+          <h3 className="text-base font-medium border-b-2 border-emerald-100 dark:border-emerald-950 pb-1">
+            À propos
+          </h3>
+          <p className="text-sm text-slate-600 dark:text-slate-300">
+            Passionné par le développement, j'aime créer des applications
+            performantes et bien pensées. J'accorde une grande importance à la
+            qualité du code, à la sécurité et à l'expérience utilisateur.
+          </p>
+        </div>
       </div>
     </div>
   );
