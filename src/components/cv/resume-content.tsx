@@ -1,11 +1,16 @@
+"use client";
+
 import { BorderBeam } from "@/components/magicui/border-beam";
 import { SkillsCard } from "@/components/cv/skills-card";
 import { ExperienceCard } from "@/components/cv/experience-card";
 import { EducationCard } from "@/components/cv/education-card";
 import { InfoCard } from "./info-card";
 import { ProfileCard } from "./profile-card";
+import { useLanguage } from "@/contexts/language-context";
 
 export function ResumeContent() {
+  const { dictionary } = useLanguage();
+
   return (
     <div className="relative w-full bg-white dark:bg-zinc-900 shadow-lg rounded-xl overflow-hidden border border-slate-200 dark:border-zinc-800 resume-content">
       <BorderBeam
@@ -27,10 +32,10 @@ export function ResumeContent() {
       {/* En-tête du CV */}
       <div className="p-3 border-b border-slate-200 dark:border-zinc-800 text-center">
         <h1 className="text-2xl font-bold tracking-tight text-slate-900 dark:text-white">
-          Mickaël WARIN
+          {dictionary.profile.name}
         </h1>
         <p className="text-sm text-slate-600 dark:text-slate-400">
-          Développeur Full Stack
+          {dictionary.profile.title}
         </p>
       </div>
 

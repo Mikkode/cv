@@ -1,5 +1,8 @@
+"use client";
+
 import { Code2 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import { useLanguage } from "@/contexts/language-context";
 
 type SkillCategory = {
   title: string;
@@ -90,11 +93,13 @@ const SkillSection = ({ category }: { category: SkillCategory }) => (
 );
 
 export function SkillsCard() {
+  const { dictionary } = useLanguage();
+
   return (
     <div>
       <h2 className="text-base font-semibold text-slate-900 dark:text-white mb-4 flex items-center bg-slate-100 dark:bg-zinc-800 p-2 rounded-md">
         <Code2 className="mr-1.5 size-4 text-emerald-600 dark:text-emerald-400" />
-        Compétences
+        {dictionary.skills.title}
       </h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
