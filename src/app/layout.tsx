@@ -21,10 +21,18 @@ export const metadata: Metadata = {
     "React",
     "Node.js",
     "TypeScript",
+    "JavaScript",
     "développeur web",
-    "SAAS",
+    "CV",
+    "portfolio",
+    "Mickaël WARIN",
   ],
   authors: [{ name: "Mickaël WARIN" }],
+  creator: "Mickaël WARIN",
+  publisher: "Mickaël WARIN",
+  icons: {
+    icon: [{ url: "/favicon.png", sizes: "any" }],
+  },
   openGraph: {
     title: "CV - Développeur Fullstack | Next.js, React, Node.js, TypeScript",
     description:

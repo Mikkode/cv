@@ -1,25 +1,39 @@
-import { Sun, Moon } from "lucide-react";
-import { Button } from "./ui/button";
+"use client";
+
 import { useTheme } from "next-themes";
-import React from "react";
+import { Moon, Sun } from "lucide-react";
+import { useEffect, useState } from "react";
 
-export default function ButtonTheme({ className }: { className?: string }) {
+export default function ButtonTheme() {
   const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
 
-  const toggleTheme = () => {
-    setTheme(theme === "dark" ? "light" : "dark");
-  };
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return (
+      <button
+        className="bg-slate-200 dark:bg-zinc-700 text-slate-700 dark:text-slate-300 p-2 rounded-full transition-colors"
+        aria-label="Changer de thème"
+      >
+        <Sun className="h-[1.2rem] w-[1.2rem]" />
+      </button>
+    );
+  }
 
   return (
-    <Button
-      variant="outline"
-      size="icon"
-      className={`rounded-full shadow-md bg-white/90 dark:bg-zinc-800/90 backdrop-blur-sm border-0 cursor-pointer ${className}`}
-      onClick={toggleTheme}
+    <button
+      onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+      className="bg-slate-200 hover:bg-slate-300 dark:bg-zinc-700 dark:hover:bg-zinc-600 text-slate-700 dark:text-slate-300 p-2 rounded-full transition-colors cursor-pointer"
       aria-label="Changer de thème"
     >
-      <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-      <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-    </Button>
+      {theme === "dark" ? (
+        <Sun className="h-[1.2rem] w-[1.2rem]" />
+      ) : (
+        <Moon className="h-[1.2rem] w-[1.2rem]" />
+      )}
+    </button>
   );
 }

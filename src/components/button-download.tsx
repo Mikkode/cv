@@ -9,7 +9,7 @@ export default function ButtonDownload({ className }: { className?: string }) {
   return (
     <a
       href={`/download?locale=${locale}`}
-      className={`bg-emerald-500 text-white py-2 px-4 rounded-full shadow-md hover:bg-emerald-600 transition ${className}`}
+      className={`bg-emerald-500 hover:bg-emerald-600 text-white p-2 rounded-full shadow-md transition-colors ${className}`}
       aria-label={locale === "fr" ? "Télécharger le CV" : "Download CV"}
     >
       <Download className="h-[1.2rem] w-[1.2rem]" />

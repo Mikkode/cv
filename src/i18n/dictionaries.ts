@@ -13,7 +13,7 @@ export const dictionaries = {
       items: [
         {
           position: "Full-Stack Developer | Freelance",
-          period: "Oct. 2024 - Present",
+          period: "Oct. 2024 - Now",
           description:
             "Freelance Full-Stack Developer specialized in NextJS, NestJS. I help companies design high-performance, secure web applications tailored to their needs.",
           achievements: [
@@ -72,6 +72,12 @@ export const dictionaries = {
     },
     skills: {
       title: "Skills",
+      categories: {
+        frontend: "Frontend Development",
+        backend: "Backend Development",
+        devops: "DevOps & Tools",
+        other: "Other Skills",
+      },
     },
   },
   fr: {
@@ -147,6 +153,12 @@ export const dictionaries = {
     },
     skills: {
       title: "Compétences",
+      categories: {
+        frontend: "Développement Front-end",
+        backend: "Développement Back-end",
+        devops: "DevOps & Outils",
+        other: "Autres compétences",
+      },
     },
   },
 };

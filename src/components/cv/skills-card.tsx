@@ -5,14 +5,14 @@ import { Badge } from "@/components/ui/badge";
 import { useLanguage } from "@/contexts/language-context";
 
 type SkillCategory = {
-  title: string;
+  id: string;
   colorClass: string;
   skills: string[];
 };
 
 const skillsData: SkillCategory[] = [
   {
-    title: "Développement Front-end",
+    id: "frontend",
     colorClass:
       "bg-blue-50 text-blue-700 dark:bg-blue-900/20 dark:text-blue-300",
     skills: [
@@ -27,7 +27,7 @@ const skillsData: SkillCategory[] = [
     ],
   },
   {
-    title: "Développement Back-end",
+    id: "backend",
     colorClass:
       "bg-indigo-50 text-indigo-700 dark:bg-indigo-900/20 dark:text-indigo-300",
     skills: [
@@ -44,13 +44,13 @@ const skillsData: SkillCategory[] = [
     ],
   },
   {
-    title: "DevOps & Outils",
+    id: "devops",
     colorClass:
       "bg-purple-50 text-purple-700 dark:bg-purple-900/20 dark:text-purple-300",
     skills: ["Git", "GitHub", "Bitbucket", "Docker", "Vercel", "CI/CD"],
   },
   {
-    title: "Autres compétences",
+    id: "other",
     colorClass:
       "bg-amber-50 text-amber-700 dark:bg-amber-900/20 dark:text-amber-300",
     skills: [
@@ -60,7 +60,7 @@ const skillsData: SkillCategory[] = [
       "LabWindows/CVI",
       "Linux",
       "SCPI",
-      "Hyperfréquence",
+      "Microwave measurement",
     ],
   },
 ];
@@ -75,10 +75,16 @@ const SkillBadge = ({
   <Badge className={`text-xs h-5 px-1.5 ${colorClass} border-0`}>{skill}</Badge>
 );
 
-const SkillSection = ({ category }: { category: SkillCategory }) => (
+const SkillSection = ({
+  category,
+  title,
+}: {
+  category: SkillCategory;
+  title: string;
+}) => (
   <div>
     <h3 className="font-medium text-slate-900 dark:text-white text-sm mb-1.5 border-b-2 border-emerald-500/30 dark:border-emerald-500/30 pb-1">
-      {category.title}
+      {title}
     </h3>
     <div className="flex flex-wrap gap-1">
       {category.skills.map((skill) => (
@@ -104,7 +110,11 @@ export function SkillsCard() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
         {skillsData.map((category) => (
-          <SkillSection key={category.title} category={category} />
+          <SkillSection
+            key={category.id}
+            category={category}
+            title={dictionary.skills.categories[category.id]}
+          />
         ))}
       </div>
     </div>
