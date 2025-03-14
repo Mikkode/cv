@@ -4,7 +4,7 @@ export const dictionaries = {
       name: "Mickaël WARIN",
       title: "Full-Stack Developer",
       about:
-        "Passionate about development, I enjoy creating high-performance and well-designed applications. I place great importance on code quality, security, and user experience.",
+        "Passionate about development, I enjoy creating high-performance and well-designed applications. I give great importance on code quality, security, and user experience.",
       profileTitle: "Profile",
       aboutTitle: "About",
     },
