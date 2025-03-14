@@ -27,6 +27,6 @@ export async function GET(request: Request) {
     });
   } catch (error) {
     // En cas d'erreur (fichier non trouvé, etc.)
-    return new NextResponse("FIle not found", { status: 404 });
+    return new NextResponse(`File not found ${error}`, { status: 404 });
   }
 }

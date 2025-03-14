@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { TerminalLoader } from "@/components/cv/terminal-loader";
 import { ResumeContent } from "@/components/cv/resume-content";
@@ -8,6 +8,7 @@ import ButtonTheme from "@/components/button-theme";
 import ButtonDownload from "@/components/button-download";
 import LanguageSwitcher from "@/components/language-switcher";
 // import { useReactToPrint } from "react-to-print";
+// import { useRef } from "react";
 
 export default function Home() {
   const [isAnimating, setIsAnimating] = useState(false);
