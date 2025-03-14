@@ -7,10 +7,12 @@ import { ResumeContent } from "@/components/cv/resume-content";
 import ButtonTheme from "@/components/button-theme";
 import ButtonDownload from "@/components/button-download";
 import LanguageSwitcher from "@/components/language-switcher";
+// import { useReactToPrint } from "react-to-print";
 
 export default function Home() {
   const [isAnimating, setIsAnimating] = useState(false);
-  const resumeRef = useRef<HTMLDivElement>(null);
+  // const resumeRef = useRef<HTMLDivElement>(null);
+  // const reactToPrintFn = useReactToPrint({ contentRef: resumeRef });
 
   const handleTerminalLoadingComplete = () => {
     setIsAnimating(true);
@@ -31,6 +33,7 @@ export default function Home() {
             <ButtonTheme />
             <ButtonDownload />
             <LanguageSwitcher />
+            {/* <button onClick={() => reactToPrintFn()}>Print</button> */}
           </motion.div>
         </div>
 
@@ -49,9 +52,9 @@ export default function Home() {
           }}
           className="w-full lg:min-w-3xl lg:max-w-4xl"
         >
-          <div ref={resumeRef}>
-            <ResumeContent />
-          </div>
+          {/* <div ref={resumeRef}> */}
+          <ResumeContent />
+          {/* </div> */}
         </motion.div>
       </div>
     </div>
